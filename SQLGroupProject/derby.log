@@ -1,13 +1,13 @@
 ----------------------------------------------------------------
-Sat Sep 23 20:04:56 MDT 2023:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.1.3 - (1557168): instance a816c00e-018a-c4ee-c273-00001f40bdc8 
-on database directory C:\Users\Kevin\eclipse-workspace\SQLGroupProject\FirstDatabase with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@6d311334 
-Loaded from file:/C:/Users/Kevin/eclipse-workspace/SQLGroupProject/lib/derby.jar
+Wed Sep 27 19:32:37 MDT 2023:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.1.3 - (1557168): instance a816c00e-018a-d96a-9a0f-00000761a000 
+on database directory /Users/kevindang/Documents/GitHub/2410_SQL/SQLGroupProject/FirstDatabase with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@28d93b30 
+Loaded from file:/Users/kevindang/Documents/GitHub/2410_SQL/SQLGroupProject/lib/derby.jar
 java.vendor=Oracle Corporation
 java.runtime.version=18.0.2.1+1-1
-user.dir=C:\Users\Kevin\eclipse-workspace\SQLGroupProject
-os.name=Windows 10
-os.arch=amd64
-os.version=10.0
+user.dir=/Users/kevindang/Documents/GitHub/2410_SQL/SQLGroupProject
+os.name=Mac OS X
+os.arch=x86_64
+os.version=11.7.8
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
