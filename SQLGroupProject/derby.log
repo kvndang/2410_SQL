@@ -1,6 +1,6 @@
 ----------------------------------------------------------------
-Wed Sep 27 19:32:37 MDT 2023:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.1.3 - (1557168): instance a816c00e-018a-d96a-9a0f-00000761a000 
+Thu Sep 28 02:22:43 MDT 2023:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.1.3 - (1557168): instance a816c00e-018a-dae2-11b1-00000761a000 
 on database directory /Users/kevindang/Documents/GitHub/2410_SQL/SQLGroupProject/FirstDatabase with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@28d93b30 
 Loaded from file:/Users/kevindang/Documents/GitHub/2410_SQL/SQLGroupProject/lib/derby.jar
 java.vendor=Oracle Corporation

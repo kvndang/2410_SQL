@@ -3,8 +3,35 @@ package sqlgroupproject;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
-
+import java.sql.Statement;
+/**
+ * The employee class allows the user to create a table containing employees once instantiated. It requires a Statement to be sent
+ * to it from the derby database. 
+ * @authors Monte, Edwin, James, Kevin
+ */
 public class Employee {
+	//Fields
+	Statement statement;
+	ResultSet resultSet;
+	ResultSetMetaData metaData;
+	/**
+	 * Constructor for the employee class. Creating an instance of this class will allow the user to manipulate the Employee SQL Table
+	 * @param statement
+	 * @author Kevin
+	 */
+	public Employee(Statement statement)
+	{
+		this.statement = statement;
+		try {
+		resultSet = statement.executeQuery(Employee.selectAll);
+		metaData = resultSet.getMetaData();
+		}catch(SQLException e)
+		{
+			System.out.println("Something went wrong accessing SQL");
+		}
+		
+	}
+	//These are the SQL methods... We can remove/change these later when we make our own methods
 	public static final String createTable =
 			"CREATE TABLE Employee ("
 			+ "Id  int not null primary key "
@@ -36,9 +63,8 @@ public class Employee {
 	 * @param resultSet
 	 * @throws SQLException
 	 */
-	private static void printTableData(ResultSet resultSet) throws SQLException {
-		ResultSetMetaData metaData = resultSet.getMetaData();
-		
+	public void printTableData() throws SQLException {
+		resultSet = statement.executeQuery(Employee.selectAll);
 		//print header
 		int dashCount = 0;
 		for(int i = 1; i <= metaData.getColumnCount(); i++) {
@@ -56,6 +82,65 @@ public class Employee {
 			}
 			System.out.println();
 		}
-		
+		}
+	
+	/**
+	 * Returns the amount of columns in the Employee database. 
+	 * @return
+	 * @author Kevin
+	 */ 
+	public int getColumnCount()
+	{
+		try {
+		return metaData.getColumnCount();
+		}catch(SQLException e)
+		{
+			e.printStackTrace();
+		}
+		return 0;
 	}
+	
+	/**
+	 * Java method for executing the dropTable SQL method.
+	 * @author Kevin
+	 */
+	public void dropTable()
+	{
+		try {
+		statement.execute(dropTable);
+		}catch(SQLException e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * Java method for executing the createTable SQL method.
+	 * @author Kevin
+	 */
+	public void createTable()
+	{
+		try {
+		statement.execute(createTable);
+		resultSet = statement.executeQuery(Employee.selectAll);
+		}catch(SQLException e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * Java method for executing the insertData SQL method.
+	 * @author Kevin
+	 */
+	public void insertData()
+	{
+		try {
+		statement.execute(insertData);
+		}catch(SQLException e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
 	}
